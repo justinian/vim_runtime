@@ -10,7 +10,7 @@ set statusline+=\ %F		"filename
 set statusline+=\ %*	" normal color
 set statusline+=\ %h	"help file flag
 if exists("g:saved_gfn")
-	set statusline+=[JP]	"japanese mode flag
+	set statusline+=[日本語]	"japanese mode flag
 endif
 set statusline+=\ %h	"help file flag
 set statusline+=%m      "modified flag
