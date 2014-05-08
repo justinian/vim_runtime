@@ -12,8 +12,10 @@ set hidden
 set number
 set modeline
 
-" Use UTF-8 internally and by default
+" Use UTF-8 internally and by default and always create
+" new files with unix line endings
 set encoding=utf-8
+set fileformats=unix,dos
 
 set backspace=indent,eol,start
 
