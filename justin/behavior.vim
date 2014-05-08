@@ -12,6 +12,9 @@ set hidden
 set number
 set modeline
 
+" Use UTF-8 internally and by default
+set encoding=utf-8
+
 set backspace=indent,eol,start
 
 " if a buffer is already open in another window or tab,
@@ -44,7 +47,6 @@ set autoindent
 filetype indent on
 
 " IME Options
-set iminsert=0
 set imdisable
 
 " But don't auto-continue comments

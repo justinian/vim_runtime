@@ -9,6 +9,10 @@ set statusline+=%#OrangeBar#	" change color
 set statusline+=\ %F		"filename
 set statusline+=\ %*	" normal color
 set statusline+=\ %h	"help file flag
+if exists("g:saved_gfn")
+	set statusline+=[JP]	"japanese mode flag
+endif
+set statusline+=\ %h	"help file flag
 set statusline+=%m      "modified flag
 set statusline+=%r      "read only flag
 set statusline+=%y      "filetype
