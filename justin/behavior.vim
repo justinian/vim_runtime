@@ -6,7 +6,7 @@ set ignorecase
 set smartcase
 set showmatch
 set wildmenu
-set wildmode=longest,list
+set wildmode=longest:full,full
 set autochdir
 set hidden
 set number
