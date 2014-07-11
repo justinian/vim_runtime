@@ -1,5 +1,12 @@
 source $VIMRUNTIME/mswin.vim
 
+" Use UTF-8 internally and by default and always create
+" new files with unix line endings
+" MAKE SURE ENCODING GETS SET FIRST! See:
+" http://stackoverflow.com/questions/4449520/vim-opens-a-new-folder-instead-of-an-existing-file-with-set-enc-utf-8-enabled
+set encoding=utf-8
+set fileformats=unix,dos
+
 set incsearch
 set hlsearch
 set ignorecase
@@ -11,11 +18,6 @@ set autochdir
 set hidden
 set number
 set modeline
-
-" Use UTF-8 internally and by default and always create
-" new files with unix line endings
-set encoding=utf-8
-set fileformats=unix,dos
 
 set backspace=indent,eol,start
 
