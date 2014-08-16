@@ -23,5 +23,5 @@ endif
 autocmd BufNewFile,BufRead *.boo setf boo
 autocmd BufNewFile,BufRead *.proto setf proto
 autocmd BufNewFile,BufRead *.voom Voom
-autocmd BufNewFile,BufRead *.py setlocal noet ts=8
+autocmd BufNewFile,BufRead *.py setlocal noet ts=4
 
