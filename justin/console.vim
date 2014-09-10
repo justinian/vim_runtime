@@ -1,3 +1,7 @@
 set t_Co=256
 set bg=dark
-color molokai_orangebar
+if &term == 'win32'
+	color darkrobot
+else
+	color molokai_orangebar
+end
