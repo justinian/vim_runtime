@@ -18,6 +18,7 @@ nmap <silent> <F3> lwindow<CR>
 nmap <silent> ,e :BufExplorer<CR>
 "nmap <silent> ,E :Explore<CR>
 nmap <silent> ,E :NERDTreeToggle<CR>
+nmap <silent> ,g :GoImports<CR>
 
 nmap \tt :TlistOpen<CR>
 nmap \tu :TlistUpdate<CR>
