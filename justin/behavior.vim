@@ -38,6 +38,9 @@ set cm=blowfish
 " Buffer Explorer: Sort by full file path name.
 let g:bufExplorerSortBy='fullpath'
 
+" NERDTree
+let NERDTreeIgnore = ['\.pyc$']
+
 syntax on
 filetype on
 filetype plugin on
