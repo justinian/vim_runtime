@@ -74,6 +74,10 @@ au FileType xml setlocal foldmethod=syntax
 au FileType cpp setlocal foldmethod=syntax
 au FileType c setlocal foldmethod=syntax
 
+let g:is_bash=1 "default sh syntax is Bash
+let g:sh_fold_enabled=7 "enable function, heredoc, and if/do/for sh folding
+au FileType sh setlocal foldmethod=syntax
+
 set tags=tags;/
 
 " Save tempfiles to the temp folder, duh
