@@ -1,6 +1,10 @@
 set lines=70
 set columns=140
-set gfn=Consolas:h8:cANSI
+if has('gui_macvim')
+	set gfn=Consolas:h12
+else
+	set gfn=Consolas:h8:cANSI
+endif
 set go=egmrLt
 color molokai_orangebar
 "color eclipse

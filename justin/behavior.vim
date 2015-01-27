@@ -41,6 +41,9 @@ let g:bufExplorerSortBy='fullpath'
 " NERDTree
 let NERDTreeIgnore = ['\.pyc$']
 
+" MacVim what you doin
+let macvim_skip_colorscheme = 1
+
 syntax on
 filetype on
 filetype plugin on
