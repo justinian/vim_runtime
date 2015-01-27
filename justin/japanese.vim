@@ -11,4 +11,5 @@ function! Toggle_Japanese()
 	runtime justin/statusline.vim
 endfunction
 
-map <F7> :call Toggle_Japanese()<CR>
+command Nihongo :call Toggle_Japanese()<CR>
+map <F7> :Nihongo<CR>
