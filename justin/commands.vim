@@ -26,11 +26,11 @@ nmap \tc :TlistClose<CR>
 nmap \tp :TlistShowPrototype<CR>
 
 " Tab page commands
-nnoremap ,t :tab e 
-nnoremap <silent> <C-TAB> gt
-nnoremap <silent> <C-S-TAB> gT
-nnoremap <silent> <C-T> :tabnew<CR>
-command! -nargs=+ Te :noautocmd :silent execute "tab e " . expand("<args>")
+" nnoremap ,t :tab e 
+" nnoremap <silent> <C-TAB> gt
+" nnoremap <silent> <C-S-TAB> gT
+" nnoremap <silent> <C-T> :tabnew<CR>
+" command! -nargs=+ Te :noautocmd :silent execute "tab e " . expand("<args>")
 
 " Find Commands
 nmap ,f :FindThisDir 
