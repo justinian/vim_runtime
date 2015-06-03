@@ -67,13 +67,6 @@ let g:netrw_liststyle = 3
 "The below is for opening tabs.
 "let g:netrw_browse_split = 3
 
-" Folding
-set foldlevelstart=99
-set foldmethod=manual
-au FileType xml setlocal foldmethod=syntax
-au FileType cpp setlocal foldmethod=syntax
-au FileType c setlocal foldmethod=syntax
-
 let g:is_bash=1 "default sh syntax is Bash
 let g:sh_fold_enabled=7 "enable function, heredoc, and if/do/for sh folding
 au FileType sh setlocal foldmethod=syntax

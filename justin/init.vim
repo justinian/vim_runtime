@@ -2,6 +2,7 @@ execute pathogen#infect()
 
 runtime justin/functions.vim
 runtime justin/behavior.vim
+runtime justin/folding.vim
 runtime justin/commands.vim
 runtime justin/snippets.vim
 runtime justin/japanese.vim
