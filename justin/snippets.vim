@@ -1,4 +1,17 @@
 " nmap <silent> ,id "=strftime("%c")<CR>P
-iab xxd ## <C-R>=strftime("%a, %d %b %Y")<CR>
-iab xxt <C-O>d0<Space>* _<C-R>=strftime("%I:%M %p")<CR>_ -
+
+let g:BASH_Ctrl_j = 'off'
+
+imap <silent> <C-j>d # <C-R>=strftime("%a, %d %b %Y")<CR>
+nmap <silent> <C-j>d i<C-j>d
+iab xxd <C-j>d
+
+imap <silent> <C-j>T ### _<C-R>=strftime("%I:%M %p")<CR>_<Space>
+nmap <silent> <C-j>T i<C-j>t
+iab xtt <C-j>T
+
+imap <silent> <C-j>t _<C-R>=strftime("%I:%M %p")<CR>_ -
+nmap <silent> <C-j>t i<C-j>t
+iab xxt <C-j>t
+
 
