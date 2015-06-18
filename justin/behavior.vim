@@ -39,7 +39,7 @@ set cm=blowfish
 let g:bufExplorerSortBy='fullpath'
 
 " NERDTree
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 
 " MacVim what you doin
 let macvim_skip_colorscheme = 1
