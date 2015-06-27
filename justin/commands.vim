@@ -36,6 +36,10 @@ nmap \tp :TlistShowPrototype<CR>
 nmap ,f :FindThisDir 
 nmap ,F :FindParentDir 
 
+" Add better regexp replaces to search/replace
+nmap ,s :%s/\v/g<LEFT><LEFT>
+vmap ,s :s/\v/g<LEFT><LEFT>
+
 " Lisp Commands
 " =============
 " re-indent entire top-level form
