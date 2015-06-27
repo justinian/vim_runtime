@@ -1,8 +1,3 @@
-" command! -nargs=+ FindThisDir :noautocmd :silent execute "lgrep! \"" . expand("<args>") . "\" " . expand("%:p:h") | lw
-" command! -nargs=+ FindParentDir :noautocmd :silent execute "lgrep! \"" . expand("<args>") . "\" " . expand("%:p:h:h") | lw
-command! -nargs=+ FindThisDir :noautocmd :silent execute "lvimgrep /" . expand("<args>") . "/j ./**" | lw
-command! -nargs=+ FindParentDir :noautocmd :silent execute "lvimgrep /" . expand("<args>") . "/j ../**" | lw
-
 nmap <silent> ,n :set number!<CR>
 nmap <silent> ,w :set wrap!<CR>
 nmap <silent> ,W gqip
@@ -33,8 +28,8 @@ nmap \tp :TlistShowPrototype<CR>
 " command! -nargs=+ Te :noautocmd :silent execute "tab e " . expand("<args>")
 
 " Find Commands
-nmap ,f :FindThisDir 
-nmap ,F :FindParentDir 
+nmap ,f :LAg!
+nmap ,F :LAg! ..<LEFT><LEFT><LEFT>
 
 " Add better regexp replaces to search/replace
 nmap ,s :%s/\v/g<LEFT><LEFT>
