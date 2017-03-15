@@ -1,7 +1,11 @@
 set t_Co=256
-set bg=dark
+set t_ut=
+
 if &term == 'win32'
 	color darkrobot
 else
-	color molokai_orangebar
+	let g:gruvbox_contrast_dark="hard"
+	color gruvbox
 end
+
+set bg=dark

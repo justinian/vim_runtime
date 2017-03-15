@@ -18,6 +18,7 @@ set autochdir
 set hidden
 set number
 set modeline
+set visualbell
 
 set backspace=indent,eol,start
 
