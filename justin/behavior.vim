@@ -53,8 +53,10 @@ set splitbelow
 
 " IndentatioN
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set autoindent
+set expandtab
 filetype indent on
 
 " IME Options
