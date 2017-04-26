@@ -3,7 +3,7 @@ set columns=140
 if has('gui_macvim')
 	set gfn=Consolas:h12
 else
-	set gfn=Consolas:h8:cANSI
+	set gfn=Consolas:h11:cANSI
 endif
 set go=egmrLt
 color molokai_orangebar
