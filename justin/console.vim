@@ -9,3 +9,4 @@ else
 end
 
 set bg=dark
+set mouse=a
