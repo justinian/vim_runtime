@@ -74,6 +74,10 @@ let g:is_bash=1 "default sh syntax is Bash
 let g:sh_fold_enabled=7 "enable function, heredoc, and if/do/for sh folding
 au FileType sh setlocal foldmethod=syntax
 
+" Vim-go
+let g:go_fmt_command = "goimports"
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+
 set tags=tags;/
 
 " Save tempfiles to the temp folder, duh
