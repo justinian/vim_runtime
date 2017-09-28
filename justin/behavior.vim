@@ -77,6 +77,8 @@ au FileType sh setlocal foldmethod=syntax
 " Vim-go
 let g:go_fmt_command = "goimports"
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+autocmd BufNewFile,BufRead *.go nmap ,b :GoBuild<CR>
+autocmd BufNewFile,BufRead *.go nmap ,t :GoTest<CR>
 
 set tags=tags;/
 
