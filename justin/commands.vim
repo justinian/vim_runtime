@@ -6,6 +6,7 @@ nmap <silent> ,<TAB> :e#<CR>
 nmap <silent> ,h :call Mosh_Flip_Ext()<CR>
 nmap <silent> ,RR :e! %<CR>
 nmap <silent> ,SS :%s/^\s\+$//g<CR>
+nmap <silent> ,VM :call Stream_Mode()<CR>
 nmap <silent> <F2> cwindow<CR>
 nmap <silent> <F3> lwindow<CR>
 
@@ -31,7 +32,7 @@ nmap \tp :TlistShowPrototype<CR>
 nmap ,f :LAg!
 nmap ,F :LAg! ..<LEFT><LEFT><LEFT>
 
-" Add better regexp replaces to search/replace
+" Add better regular expression replaces to search/replace
 nmap ,s :%s/\v/g<LEFT><LEFT>
 vmap ,s :s/\v/g<LEFT><LEFT>
 

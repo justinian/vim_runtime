@@ -5,7 +5,7 @@ function! Toggle_Japanese()
 		set imdisable
 	else
 		let g:saved_gfn=&gfn
-		set gfn=MS_Gothic:h10:cANSI
+		set gfn=DejaVu_Sans_Mono:h12
 		set noimdisable
 	endif
 	runtime justin/statusline.vim

@@ -11,3 +11,9 @@ function! Mosh_Flip_Ext()
   endif
 endfun
 
+function! Stream_Mode()
+    " Set the font size bigger for streaming or just old
+    " man eyes.
+    set gfn=Consolas:h14
+endfun
+

@@ -1,9 +1,9 @@
 source $VIMRUNTIME/mswin.vim
+unmap <C-F>
 
-" Use UTF-8 internally and by default and always create
-" new files with unix line endings
-" MAKE SURE ENCODING GETS SET FIRST! See:
-" http://stackoverflow.com/questions/4449520/vim-opens-a-new-folder-instead-of-an-existing-file-with-set-enc-utf-8-enabled
+" Use UTF-8 internally and by default and always create new files
+" with " unix line endings: MAKE SURE ENCODING GETS SET FIRST! See:
+" http://stackoverflow.com/questions/4449520
 set encoding=utf-8
 set fileformats=unix,dos
 
@@ -44,6 +44,16 @@ let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 
 " MacVim what you doin
 let macvim_skip_colorscheme = 1
+
+" CtrlP and wildcard ignores
+if has("win32")
+    set wildignore+=*.swp,*.zip,*.exe,*.dll,*\\.git\\*,*\\build\\*,*.obj
+else
+    set wildignore+=*.so,*.swp,*.zip,*/build/*,*.o
+endif
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]external[\/].*[\/]doc|test|example',
+  \ }
 
 syntax on
 filetype on
