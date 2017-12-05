@@ -103,3 +103,7 @@ endif
 autocmd FileChangedRO * echohl WarningMsg | echo "File changed RO." | echohl None
 autocmd FileChangedShell * echohl WarningMsg | echo "File changed shell." | echohl None
 
+let g:lightline = {
+    \ 'colorscheme': 'molokai',
+    \ }
+set noshowmode
