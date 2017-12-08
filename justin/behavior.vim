@@ -1,5 +1,7 @@
 source $VIMRUNTIME/mswin.vim
-unmap <C-F>
+if mapcheck("<C-F>") != ""
+    unmap <C-F>
+endif
 
 " Use UTF-8 internally and by default and always create new files
 " with " unix line endings: MAKE SURE ENCODING GETS SET FIRST! See:
