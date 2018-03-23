@@ -68,7 +68,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set autoindent
-set expandtab
+set noexpandtab
 filetype indent on
 
 " IME Options
@@ -86,9 +86,10 @@ let g:is_bash=1 "default sh syntax is Bash
 let g:sh_fold_enabled=7 "enable function, heredoc, and if/do/for sh folding
 au FileType sh setlocal foldmethod=syntax
 
+autocmd BufNewFile,BufRead *.py setlocal expandtab tabstop=4 shiftwidth=4
+
 " Vim-go
 let g:go_fmt_command = "goimports"
-autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 autocmd BufNewFile,BufRead *.go nmap ,b :GoBuild<CR>
 autocmd BufNewFile,BufRead *.go nmap ,t :GoTest<CR>
 
