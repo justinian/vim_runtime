@@ -26,3 +26,4 @@ autocmd BufNewFile,BufRead *.proto setf proto
 autocmd BufNewFile,BufRead *.voom Voom
 autocmd BufNewFile,BufRead *.py setlocal et ts=4
 
+runtime justin/wsl.vim
