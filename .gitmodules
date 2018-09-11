@@ -4,9 +4,6 @@
 [submodule "bundle/vim-gnupg"]
 	path = bundle/vim-gnupg
 	url = https://github.com/jamessan/vim-gnupg.git
-[submodule "bundle/vim-markdown"]
-	path = bundle/vim-markdown
-	url = https://github.com/tpope/vim-markdown.git
 [submodule "bundle/vim-go"]
 	path = bundle/vim-go
 	url = https://github.com/fatih/vim-go
@@ -16,3 +13,6 @@
 [submodule "bundle/lightline"]
 	path = bundle/lightline
 	url = https://github.com/itchyny/lightline.vim
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = https://github.com/jlanzarotta/bufexplorer.git
