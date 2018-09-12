@@ -54,7 +54,7 @@ else
     set wildignore+=*.so,*.swp,*.zip,*/build/*,*.o
 endif
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]external[\/].*[\/]doc|test|example',
+  \ 'dir':  '\v[\/]external[\/].*[\/]doc|example',
   \ }
 
 syntax on
