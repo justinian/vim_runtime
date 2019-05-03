@@ -93,6 +93,9 @@ let g:go_fmt_command = "goimports"
 autocmd BufNewFile,BufRead *.go nmap ,b :GoBuild<CR>
 autocmd BufNewFile,BufRead *.go nmap ,t :GoTest<CR>
 
+" Python likes spaces :P
+autocmd BufNewFile,BufRead *.py setlocal expandtab
+
 set tags=tags;/
 
 " Save tempfiles to the temp folder, duh
