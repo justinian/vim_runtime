@@ -21,8 +21,23 @@ set hidden
 set number
 set modeline
 set visualbell
-
 set backspace=indent,eol,start
+set cm=blowfish
+set splitright
+set splitbelow
+set tags=tags;/
+
+syntax on
+filetype on
+filetype plugin on
+
+" Indentation
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set autoindent
+set noexpandtab
+filetype indent on
 
 " if a buffer is already open in another window or tab,
 " focus that win/tab instead of loading it again in the
@@ -36,67 +51,14 @@ set guitablabel=%t
 set keymodel=""
 set selectmode=""
 
-set cm=blowfish
-
-" Buffer Explorer: Sort by full file path name.
-let g:bufExplorerSortBy='fullpath'
-
-" NERDTree
-let NERDTreeIgnore = ['\.pyc$', '__pycache__']
-
 " MacVim what you doin
 let macvim_skip_colorscheme = 1
-
-" CtrlP and wildcard ignores
-if has("win32")
-    set wildignore+=*.swp,*.zip,*.exe,*.dll,*\\.git\\*,*\\build\\*,*.obj
-else
-    set wildignore+=*.so,*.swp,*.zip,*/build/*,*.o
-endif
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]external[\/].*[\/]doc|example',
-  \ }
-
-syntax on
-filetype on
-filetype plugin on
-set splitright
-set splitbelow
-
-" IndentatioN
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set autoindent
-set noexpandtab
-filetype indent on
 
 " IME Options
 set imdisable
 
 " But don't auto-continue comments
 set formatoptions=cql
-
-" Browser behavior
-let g:netrw_liststyle = 3
-"The below is for opening tabs.
-"let g:netrw_browse_split = 3
-
-let g:is_bash=1 "default sh syntax is Bash
-let g:sh_fold_enabled=7 "enable function, heredoc, and if/do/for sh folding
-au FileType sh setlocal foldmethod=syntax
-
-autocmd BufNewFile,BufRead *.py setlocal expandtab tabstop=4 shiftwidth=4
-
-" Vim-go
-let g:go_fmt_command = "goimports"
-autocmd BufNewFile,BufRead *.go nmap ,b :GoBuild<CR>
-autocmd BufNewFile,BufRead *.go nmap ,t :GoTest<CR>
-
-" Python likes spaces :P
-autocmd BufNewFile,BufRead *.py setlocal expandtab
-
-set tags=tags;/
 
 " Save tempfiles to the temp folder, duh
 if has('unix')
@@ -109,7 +71,46 @@ endif
 autocmd FileChangedRO * echohl WarningMsg | echo "File changed RO." | echohl None
 autocmd FileChangedShell * echohl WarningMsg | echo "File changed shell." | echohl None
 
+" Browser behavior
+let g:netrw_liststyle = 3
+
+" Folding behavior
+let g:sh_fold_enabled=7 "enable function, heredoc, and if/do/for sh folding
+au FileType sh setlocal foldmethod=syntax
+let g:is_bash=1 "default sh syntax is Bash
+
+" File types
+autocmd BufNewFile,BufRead *.proto setf proto
+
+autocmd FileType python setlocal expandtab tabstop=4 shiftwidth=4
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+"
+" Plugin Options
+"
+
+" Vim-go
+let g:go_fmt_command = "goimports"
+autocmd BufNewFile,BufRead *.go nmap ,b :GoBuild<CR>
+autocmd BufNewFile,BufRead *.go nmap ,t :GoTest<CR>
+
 let g:lightline = {
     \ 'colorscheme': 'molokai',
     \ }
 set noshowmode
+
+" CtrlP and wildcard ignores
+if has("win32")
+    set wildignore+=*.swp,*.zip,*.exe,*.dll,*\\.git\\*,*.obj
+else
+    set wildignore+=*.so,*.swp,*.zip,*.o
+endif
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]external[\/].*[\/]doc|test|example|sysroot',
+  \ }
+let g:ctrlp_root_markers = ['.p4config', '.p4ignore', '.p4ignore.txt']
+
+" Buffer Explorer: Sort by full file path name.
+let g:bufExplorerSortBy='fullpath'
+

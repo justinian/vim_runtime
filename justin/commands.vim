@@ -12,25 +12,11 @@ nmap <silent> <F3> lwindow<CR>
 
 " Plugin Commands
 nmap <silent> ,e :BufExplorer<CR>
-"nmap <silent> ,E :Explore<CR>
-nmap <silent> ,E :NERDTreeToggle<CR>
 nmap <silent> ,g :GoImports<CR>
 
-nmap \tt :TlistOpen<CR>
-nmap \tu :TlistUpdate<CR>
-nmap \tc :TlistClose<CR>
-nmap \tp :TlistShowPrototype<CR>
-
-" Tab page commands
-" nnoremap ,t :tab e 
-" nnoremap <silent> <C-TAB> gt
-" nnoremap <silent> <C-S-TAB> gT
-" nnoremap <silent> <C-T> :tabnew<CR>
-" command! -nargs=+ Te :noautocmd :silent execute "tab e " . expand("<args>")
-
 " Find Commands
-nmap ,f :LAg!
-nmap ,F :LAg! ..<LEFT><LEFT><LEFT>
+nmap ,f :Lines 
+nmap ,F :Rg 
 
 " Add better regular expression replaces to search/replace
 nmap ,s :%s/\v/g<LEFT><LEFT>
