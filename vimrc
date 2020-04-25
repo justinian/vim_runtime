@@ -3,6 +3,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'itchyny/lightline.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'ziglang/zig.vim'
+Plug 'dag/vim-fish'
 call plug#end()
 
 runtime justin/functions.vim
