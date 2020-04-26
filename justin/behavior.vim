@@ -89,6 +89,10 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 " Plugin Options
 "
 
+" vimwiki
+let g:vimwiki_list = [{'path': '~/Sync/Notes/',
+                     \ 'syntax': 'markdown', 'ext': '.md'}]
+
 " Vim-go
 let g:go_fmt_command = "goimports"
 autocmd BufNewFile,BufRead *.go nmap ,b :GoBuild<CR>

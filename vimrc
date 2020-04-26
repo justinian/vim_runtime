@@ -5,6 +5,9 @@ Plug 'itchyny/lightline.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'ziglang/zig.vim'
 Plug 'dag/vim-fish'
+Plug 'vimwiki/vimwiki'
+Plug 'freitass/todo.txt-vim'
+Plug 'junegunn/fzf'
 call plug#end()
 
 runtime justin/functions.vim
