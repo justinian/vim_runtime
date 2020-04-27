@@ -2,7 +2,7 @@
 
 let g:BASH_Ctrl_j = 'off'
 
-imap <silent> <C-j>d # <C-R>=strftime("%a, %d %b %Y")<CR>
+imap <silent> <C-j>d <C-R>=strftime("%Y.%m.%d %A")<CR>
 nmap <silent> <C-j>d i<C-j>d
 iab xxd <C-j>d
 
