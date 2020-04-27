@@ -1,6 +1,10 @@
 if v:servername == "vilog"
     set lines=30
     set columns=70
+    set textwidth=65
+    set formatoptions=2tn
+    set autoread
+    autocmd CursorHold,CursorHoldI * update
 else
     set lines=50
     set columns=140
