@@ -22,7 +22,7 @@ set number
 set modeline
 set visualbell
 set backspace=indent,eol,start
-set cm=blowfish
+set cm=blowfish2
 set splitright
 set splitbelow
 set tags=tags;/
