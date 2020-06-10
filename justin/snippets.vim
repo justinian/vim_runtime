@@ -6,6 +6,10 @@ imap <silent> <C-j>d <C-R>=strftime("%Y.%m.%d %A")<CR>
 nmap <silent> <C-j>d i<C-j>d
 iab xxd <C-j>d
 
+imap <silent> <C-j>D <C-R>=strftime("%Y-%m-%d")<CR>
+nmap <silent> <C-j>D i<C-j>D
+iab xxD <C-j>D
+
 imap <silent> <C-j>T ### _<C-R>=strftime("%I:%M %p")<CR>_<Space>
 nmap <silent> <C-j>T i<C-j>t
 iab xtt <C-j>T

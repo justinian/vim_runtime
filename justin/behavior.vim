@@ -99,7 +99,7 @@ autocmd BufNewFile,BufRead *.go nmap ,b :GoBuild<CR>
 autocmd BufNewFile,BufRead *.go nmap ,t :GoTest<CR>
 
 let g:lightline = {
-    \ 'colorscheme': 'molokai',
+    \ 'colorscheme': 'nord',
     \ }
 set noshowmode
 

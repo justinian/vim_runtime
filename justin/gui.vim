@@ -4,7 +4,8 @@ else
 	set gfn=Consolas:h11:cANSI
 endif
 set go=egmrLt
-color molokai_orangebar
+color nord
+"color molokai_orangebar
 "color eclipse
 "color pyte
 "color molokai
