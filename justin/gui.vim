@@ -10,6 +10,10 @@ color nord
 "color pyte
 "color molokai
 
+" Todo.txt highlight support
+hi! link TodoContext Function
+hi! link TodoProject Function
+
 if &diff
 	set lines=90
 	set columns=260
