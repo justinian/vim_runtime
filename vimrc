@@ -1,4 +1,4 @@
-if has('windows')
+if has('win32')
 call plug#begin('~/vimfiles/plugged')
 else
 call plug#begin('~/.vim/plugged')
