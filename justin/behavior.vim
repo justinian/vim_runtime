@@ -90,8 +90,9 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 "
 
 " vimwiki
+let g:vimwiki_global_ext = 0
 let g:vimwiki_list = [{'path': '~/Sync/Notes/',
-                     \ 'syntax': 'markdown', 'ext': '.mdown'}]
+                     \ 'syntax': 'markdown', 'ext': '.md'}]
 
 " Vim-go
 let g:go_fmt_command = "goimports"
@@ -99,7 +100,7 @@ autocmd BufNewFile,BufRead *.go nmap ,b :GoBuild<CR>
 autocmd BufNewFile,BufRead *.go nmap ,t :GoTest<CR>
 
 let g:lightline = {
-    \ 'colorscheme': 'nord',
+    \ 'colorscheme': 'molokai',
     \ }
 set noshowmode
 

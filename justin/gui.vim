@@ -3,9 +3,9 @@ if has('gui_macvim')
 else
 	set gfn=Consolas:h11:cANSI
 endif
-set go=egmrLt
-color nord
-"color molokai_orangebar
+set go=!cegmrLt
+"color nord
+color molokai_orangebar
 "color eclipse
 "color pyte
 "color molokai

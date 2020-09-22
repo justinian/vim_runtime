@@ -17,7 +17,7 @@ Plug 'vimwiki/vimwiki'
 Plug 'freitass/todo.txt-vim'
 call plug#end()
 
-colorscheme nord
+"colorscheme nord
 
 runtime justin/functions.vim
 runtime justin/behavior.vim
