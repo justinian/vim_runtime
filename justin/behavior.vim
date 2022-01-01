@@ -36,7 +36,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set autoindent
-set noexpandtab
+set expandtab
 filetype indent on
 
 " if a buffer is already open in another window or tab,
@@ -82,8 +82,10 @@ let g:is_bash=1 "default sh syntax is Bash
 " File types
 autocmd BufNewFile,BufRead *.proto setf proto
 
-autocmd FileType python setlocal expandtab tabstop=4 shiftwidth=4
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2
+
+autocmd FileType markdown setlocal spell
+autocmd FileType vimwiki setlocal spell
 
 "
 " Plugin Options
