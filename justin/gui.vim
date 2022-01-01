@@ -1,8 +1,11 @@
 if has('gui_macvim')
 	set gfn=Consolas:h12
 else
-	set gfn=Consolas:h11:cANSI
+	"set gfn=Consolas:h11:cANSI
+    set gfn=Cascadia_Code:h11:cANSI
+    set renderoptions=type:directx
 endif
+
 set go=!cegmrLt
 "color nord
 color molokai_orangebar
