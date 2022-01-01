@@ -1,10 +1,10 @@
-set textwidth=65
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
-set expandtab
-set formatoptions=2tn
-set autoread
-autocmd CursorHold,CursorHoldI * update
+setlocal textwidth=65
+setlocal shiftwidth=2
+setlocal tabstop=2
+setlocal softtabstop=2
+setlocal expandtab
+setlocal formatoptions=2tn
+setlocal autoread
+autocmd CursorHold,CursorHoldI <buffer> update
 
 inoremap <silent><buffer> <C-CR> <Esc>:VimwikiReturn 1 5<CR>
