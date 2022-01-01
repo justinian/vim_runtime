@@ -114,9 +114,9 @@ else
 endif
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]external[\/].*[\/]doc|test|example|sysroot',
+  \ 'dir':  '\v[\/]external[\/].*[\/]doc|example|sysroot',
   \ }
-let g:ctrlp_root_markers = ['.p4config', '.p4ignore', '.p4ignore.txt']
+let g:ctrlp_root_markers = ['.notes_root', '.p4config', '.p4ignore', '.p4ignore.txt']
 
 " Buffer Explorer: Sort by full file path name.
 let g:bufExplorerSortBy='fullpath'
