@@ -18,4 +18,4 @@ imap <silent> <C-j>t _<C-R>=strftime("%I:%M %p")<CR>_ -
 nmap <silent> <C-j>t i<C-j>t
 iab xxt <C-j>t
 
-
+digraphs ll 9674 " lozenge ◊
