@@ -15,9 +15,23 @@ Plug 'ziglang/zig.vim'
 Plug 'dag/vim-fish'
 Plug 'vimwiki/vimwiki'
 Plug 'freitass/todo.txt-vim'
+
+if has('nvim')
+    Plug 'neovim/nvim-lspconfig'
+endif
 call plug#end()
 
 "colorscheme nord
+
+" GUI OPTIONS
+if has("gui_running")
+    runtime justin/gui.vim
+elseif has("nvim")
+    runtime justin/nvim.vim
+    runtime justin/lsp.vim
+else
+    runtime justin/console.vim
+endif
 
 runtime justin/functions.vim
 runtime justin/behavior.vim
@@ -29,14 +43,7 @@ runtime justin/statusline.vim
 
 " DIFF OPTIONS
 if &diff
-	runtime justin/diff.vim
-endif
-
-" GUI OPTIONS
-if has("gui_running")
-	runtime justin/gui.vim
-else
-	runtime justin/console.vim
+    runtime justin/diff.vim
 endif
 
 runtime justin/wsl.vim

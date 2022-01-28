@@ -22,10 +22,13 @@ set number
 set modeline
 set visualbell
 set backspace=indent,eol,start
-set cm=blowfish2
 set splitright
 set splitbelow
 set tags=tags;/
+
+if !has('nvim')
+    set cm=blowfish2
+endif
 
 syntax on
 filetype on
