@@ -1,3 +1,6 @@
+function! Worklog()
+    return g:worklog_dir . strftime("%Y.%m") . ".md"
+endfun
 
 function! Mosh_Flip_Ext()
   " Switch editing between .c* and .h* files (and more).

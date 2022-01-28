@@ -20,6 +20,9 @@ nmap <silent> <leader>g :GoImports<CR>
 nmap <leader>f :Lines
 nmap <leader>F :Rg
 
+" Open curent month's worklog
+nmap <silent> <leader>ll :call execute("edit " . Worklog())<CR>G
+
 " Lisp Commands
 " =============
 " re-indent entire top-level form
