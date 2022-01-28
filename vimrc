@@ -1,3 +1,5 @@
+runtime justin/early.vim
+
 if has('win32')
 call plug#begin('~/vimfiles/plugged')
 else
@@ -47,7 +49,4 @@ if &diff
 endif
 
 runtime justin/wsl.vim
-
-hi clear SpellBad
-hi SpellBad cterm=underline ctermfg=red
-hi SpellBad gui=undercurl guisp=red
+runtime justin/late.vim
