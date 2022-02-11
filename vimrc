@@ -1,27 +1,5 @@
 runtime justin/early.vim
-
-if has('win32')
-call plug#begin('~/vimfiles/plugged')
-else
-call plug#begin('~/.vim/plugged')
-endif
-Plug 'arcticicestudio/nord-vim'
-
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'jlanzarotta/bufexplorer'
-Plug 'itchyny/lightline.vim'
-Plug 'junegunn/fzf'
-
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'ziglang/zig.vim'
-Plug 'dag/vim-fish'
-Plug 'vimwiki/vimwiki'
-Plug 'freitass/todo.txt-vim'
-
-if has('nvim')
-    Plug 'neovim/nvim-lspconfig'
-endif
-call plug#end()
+lua require('plugins')
 
 "colorscheme nord
 

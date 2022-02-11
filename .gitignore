@@ -2,3 +2,4 @@
 tags
 justin/local.vim
 plugged
+plugin/packer_compiled.lua
