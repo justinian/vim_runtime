@@ -117,7 +117,7 @@ else
 endif
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]external[\/].*[\/]doc|example|sysroot',
+  \ 'dir':  '\v[\/]external[\/].*[\/]doc|example|sysroot|build',
   \ }
 let g:ctrlp_root_markers = ['.notes_root', '.p4config', '.p4ignore', '.p4ignore.txt']
 
