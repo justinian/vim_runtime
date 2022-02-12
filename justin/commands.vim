@@ -23,6 +23,9 @@ nmap <leader>F :Rg
 " Open curent month's worklog
 nmap <silent> <leader>ll :call execute("edit " . Worklog())<CR>G
 
+nmap <F7> :call v:lua.increase_fontsize(-1)<CR>
+nmap <F8> :call v:lua.increase_fontsize(1)<CR>
+
 " Lisp Commands
 " =============
 " re-indent entire top-level form

@@ -1,6 +1,7 @@
 runtime justin/early.vim
 
 lua require('plugins')
+lua require('justin')
 
 color gruvbox
 let g:gruvbox_contrast_dark="hard"
