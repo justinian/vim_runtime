@@ -9,6 +9,7 @@ endif
 set encoding=utf-8
 set fileformats=unix,dos
 
+set title
 set incsearch
 set hlsearch
 set ignorecase
@@ -25,10 +26,6 @@ set backspace=indent,eol,start
 set splitright
 set splitbelow
 set tags=tags;/
-
-if !has('nvim')
-    set cm=blowfish2
-endif
 
 syntax on
 filetype on
@@ -53,12 +50,6 @@ set guitablabel=%t
 " turn off some of the stupid things :behave mswin does
 set keymodel=""
 set selectmode=""
-
-" MacVim what you doin
-let macvim_skip_colorscheme = 1
-
-" IME Options
-set imdisable
 
 " But don't auto-continue comments
 set formatoptions=cql
@@ -104,9 +95,6 @@ let g:go_fmt_command = "goimports"
 autocmd BufNewFile,BufRead *.go nmap ,b :GoBuild<CR>
 autocmd BufNewFile,BufRead *.go nmap ,t :GoTest<CR>
 
-let g:lightline = {
-    \ 'colorscheme': 'molokai',
-    \ }
 set noshowmode
 
 " CtrlP and wildcard ignores
