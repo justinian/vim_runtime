@@ -44,6 +44,28 @@ use {
     end,
 }
 
+-- Notes
+use {'nvim-telescope/telescope.nvim',
+    requires = 'nvim-lua/plenary.nvim',
+    config = function()
+        require('telescope').setup({
+            defaults = {
+                mappings = {
+                    i = {
+                        ["<C-j>"] = "move_selection_next",
+                        ["<C-k>"] = "move_selection_previous",
+                    },
+                },
+            },
+        })
+    end
+}
+use {'mickael-menu/zk-nvim',
+    config = function()
+        require('zk').setup({picker = "telescope"})
+    end
+}
+
 -- Language / filetype plugins
 use {'fatih/vim-go', run = ':GoUpdateBinaries', ft = 'go' }
 use {'ziglang/zig.vim', ft = 'zig'}

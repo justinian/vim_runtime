@@ -26,6 +26,13 @@ nmap <silent> <leader>ll :call execute("edit " . Worklog())<CR>G
 nmap <F7> :call v:lua.increase_fontsize(-1)<CR>
 nmap <F8> :call v:lua.increase_fontsize(1)<CR>
 
+" ZK notes commands
+nnoremap <silent> <leader>zn <Cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>
+nnoremap <silent> <leader>zz <Cmd>ZkNotes { sort = { 'modified' } }<CR>
+nnoremap <silent> <leader>zt <Cmd>ZkTags<CR>
+nnoremap <silent> <leader>zf <Cmd>ZkNotes { sort = { 'modified' }, match = vim.fn.input('Search: ') }<CR>
+vnoremap <silent> <leader>zf :'<,'>ZkMatch<CR>
+
 " Lisp Commands
 " =============
 " re-indent entire top-level form
