@@ -26,6 +26,7 @@ set backspace=indent,eol,start
 set splitright
 set splitbelow
 set tags=tags;/
+set mouse=a
 
 syntax on
 filetype on
