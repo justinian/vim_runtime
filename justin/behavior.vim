@@ -114,4 +114,4 @@ let g:ctrlp_root_markers = ['.notes_root', '.p4config', '.p4ignore', '.p4ignore.
 let g:bufExplorerSortBy='fullpath'
 
 " my own functions
-let g:worklog_dir = "~/Sync/Notes/echtra/monthly/"
+let g:worklog_dir = "~/notes/worklog/"
