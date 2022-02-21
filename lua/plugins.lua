@@ -49,6 +49,7 @@ use {'fatih/vim-go', run = ':GoUpdateBinaries', ft = 'go' }
 use {'ziglang/zig.vim', ft = 'zig'}
 use {'dag/vim-fish', ft = 'fish'}
 use {'freitass/todo.txt-vim', ft = 'todo'}
+use {'jsix-os/j6def.vim', ft = 'j6def' }
 use 'vimwiki/vimwiki'
 
 -- Misc
