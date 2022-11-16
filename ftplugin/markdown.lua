@@ -1,12 +1,21 @@
+local opts = { noremap=true, silent=false }
+local function map(...) vim.api.nvim_buf_set_keymap(0, ...) end
+
 vim.o.tabstop = 2
 vim.o.softtabstop = 2
 vim.o.shiftwidth = 2
+vim.o.formatoptions = "2tnc"
+map("n", "<leader>mt", "<Cmd>Toc<CR>", opts)
+
+vim.cmd [[
+  autocmd FileType qf set nowrap
+  autocmd CursorHold,CursorHoldI <buffer> update
+  setlocal comments=n:>
+  setlocal formatlistpat=^\\s*\\d\\+[.\)]\\s\\+\\\|^\\s*[*+~-]\\s\\+
+]]
 
 -- Add the key mappings only for Markdown files in a zk notebook.
 if require("zk.util").notebook_root(vim.fn.expand('%:p')) ~= nil then
-  local function map(...) vim.api.nvim_buf_set_keymap(0, ...) end
-  local opts = { noremap=true, silent=false }
-
   vim.o.signcolumn = "yes"
 
   -- Open the link under the caret.

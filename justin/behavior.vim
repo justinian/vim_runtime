@@ -78,6 +78,9 @@ let g:is_bash=1 "default sh syntax is Bash
 autocmd BufNewFile,BufRead *.proto setf proto
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2
+autocmd FileType html setlocal ts=2 sts=2 sw=2
+autocmd FileType js setlocal ts=2 sts=2 sw=2
+autocmd FileType css setlocal ts=2 sts=2 sw=2
 
 autocmd FileType markdown setlocal spell
 autocmd FileType vimwiki setlocal spell
@@ -106,12 +109,19 @@ else
 endif
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]external[\/].*[\/]doc|example|sysroot|build',
+  \ 'dir':  '\v[\/]external[\/].*[\/]doc|example|sysroot|build|node_modules',
   \ }
 let g:ctrlp_root_markers = ['.notes_root', '.p4config', '.p4ignore', '.p4ignore.txt']
 
 " Buffer Explorer: Sort by full file path name.
 let g:bufExplorerSortBy='fullpath'
 
+let g:vim_markdown_new_list_item_indent = 2
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_toc_autofit = 1
+
+" Penicl: prefix inserts with _ to disable autoformat, eg _i
+let g:pencil#map#suspend_af = '_'
+
 " my own functions
-let g:worklog_dir = "~/notes/worklog/"
+let g:worklog_dir = "/c/Users/justin/Dropbox/Notes/worklog/"

@@ -39,6 +39,7 @@ use {
             },
             sections = {
                 lualine_b = {{'branch', icons_enabled = true},},
+                lualine_x = {'encoding', 'PencilMode', 'fileformat', 'filetype'},
             },
         })
     end,
@@ -72,7 +73,9 @@ use {'ziglang/zig.vim', ft = 'zig'}
 use {'dag/vim-fish', ft = 'fish'}
 use {'freitass/todo.txt-vim', ft = 'todo'}
 use {'jsix-os/j6def.vim', ft = 'j6def' }
-use 'vimwiki/vimwiki'
+-- use 'vimwiki/vimwiki'
+use 'preservim/vim-markdown'
+use 'preservim/vim-pencil'
 
 -- Misc
 use 'neovim/nvim-lspconfig'

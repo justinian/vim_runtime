@@ -32,7 +32,7 @@ nnoremap <silent> <leader>zz <Cmd>ZkNotes { sort = { 'modified' } }<CR>
 nnoremap <silent> <leader>zt <Cmd>ZkTags<CR>
 nnoremap <silent> <leader>zf <Cmd>ZkNotes { sort = { 'modified' }, match = vim.fn.input('Search: ') }<CR>
 vnoremap <silent> <leader>zf :'<,'>ZkMatch<CR>
-command CdNotes :cd ~/notes
+command CdNotes :cd /c/Users/justin/Dropbox/Notes
 
 " Lisp Commands
 " =============
