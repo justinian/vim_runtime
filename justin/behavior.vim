@@ -3,6 +3,10 @@ if mapcheck("<C-F>") != ""
     unmap <C-F>
 endif
 
+" turn off some of the stupid things :behave mswin does
+set keymodel=""
+set selectmode=""
+
 " Use UTF-8 internally and by default and always create new files
 " with " unix line endings: MAKE SURE ENCODING GETS SET FIRST! See:
 " http://stackoverflow.com/questions/4449520
@@ -47,10 +51,6 @@ set switchbuf=useopen,usetab
 
 " Set tab-page labels
 set guitablabel=%t
-
-" turn off some of the stupid things :behave mswin does
-set keymodel=""
-set selectmode=""
 
 " But don't auto-continue comments
 set formatoptions=cql

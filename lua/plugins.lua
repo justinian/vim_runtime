@@ -23,9 +23,9 @@ use 'wbthomason/packer.nvim'
 -- use 'rebelot/kanagawa.nvim'
 
 -- Behavior / tool plugins
-use 'ctrlpvim/ctrlp.vim'
-use 'jlanzarotta/bufexplorer'
-use 'junegunn/fzf'
+-- use 'ctrlpvim/ctrlp.vim'
+-- use 'jlanzarotta/bufexplorer'
+-- use 'junegunn/fzf'
 
 -- Status Line
 use {
@@ -57,6 +57,14 @@ use {'nvim-telescope/telescope.nvim',
                         ["<C-k>"] = "move_selection_previous",
                     },
                 },
+                file_ignore_patterns = {
+                },
+            },
+            pickers = {
+                buffers = {
+                    theme = "dropdown",
+                    initial_mode = "normal",
+                },
             },
         })
     end
@@ -64,6 +72,37 @@ use {'nvim-telescope/telescope.nvim',
 use {'mickael-menu/zk-nvim',
     config = function()
         require('zk').setup({picker = "telescope"})
+    end
+}
+
+use {'ahmedkhalf/project.nvim',
+    config = function()
+        require("project_nvim").setup {}
+        require('telescope').load_extension('projects')
+    end
+}
+
+use {'nvim-tree/nvim-tree.lua',
+    config = function()
+        require('nvim-tree').setup {
+            git = {
+                enable = true,
+            },
+            modified = {
+                enable = true,
+            },
+            renderer = {
+                highlight_git = true,
+                highlight_opened_files = "name",
+                highlight_modified = "icon",
+            },
+            respect_buf_cwd = true,
+            sync_root_with_cwd = true,
+            update_focused_file = {
+                enable = true,
+                update_root = true,
+            },
+        }
     end
 }
 
@@ -77,6 +116,11 @@ use {'jsix-os/j6def.vim', ft = 'j6def' }
 use 'preservim/vim-markdown'
 use 'preservim/vim-pencil'
 
--- Misc
-use 'neovim/nvim-lspconfig'
+-- Language Server
+use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
+use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
+use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
+use 'L3MON4D3/LuaSnip' -- Snippets plugin
+
 end)
