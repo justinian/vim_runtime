@@ -17,16 +17,6 @@ return require('packer').startup(function()
 -- Packer itself
 use 'wbthomason/packer.nvim'
 
--- Theme plugins
--- use 'arcticicestudio/nord-vim'
--- use 'EdenEast/nightfox.nvim'
--- use 'rebelot/kanagawa.nvim'
-
--- Behavior / tool plugins
--- use 'ctrlpvim/ctrlp.vim'
--- use 'jlanzarotta/bufexplorer'
--- use 'junegunn/fzf'
-
 -- Status Line
 use {
     'nvim-lualine/lualine.nvim',

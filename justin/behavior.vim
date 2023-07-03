@@ -123,5 +123,8 @@ let g:vim_markdown_toc_autofit = 1
 " Penicl: prefix inserts with _ to disable autoformat, eg _i
 let g:pencil#map#suspend_af = '_'
 
+" todo.txt
+let g:todo_done_filename = 'done.txt
+
 " my own functions
 let g:worklog_dir = "/c/Users/justin/Dropbox/Notes/worklog/"

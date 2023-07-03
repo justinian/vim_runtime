@@ -38,7 +38,8 @@ local on_attach = function(client, bufnr)
 
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
-  buf_set_keymap('n', '<leader>h', '<cmd>ClangdSwitchSourceHeader<CR>', opts)
+  buf_set_keymap('n', '<leader>lh', '<cmd>ClangdSwitchSourceHeader<CR>', opts)
+  buf_set_keymap('n', '<leader>lr', '<cmd>Telescope lsp_references initial_mode=normal<CR>', opts)
 
 end
 

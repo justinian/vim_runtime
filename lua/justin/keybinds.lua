@@ -25,5 +25,6 @@ mapl('t', '<cmd>NvimTreeFocus<CR>')
 -- telescope
 mapl('e', '<cmd>Telescope buffers<CR>')
 mapl('p', '<cmd>Telescope find_files hidden=true<CR>')
+mapl('f', '<cmd>Telescope grep_string<CR>')
 
 map('n', '<C-P>', '<cmd>Telescope find_files<CR>')
