@@ -9,7 +9,10 @@ require "justin/functions"
 require "justin/options"
 require "justin/keybinds"
 
--- DIFF OPTIONS
 if vim.opt.diff:get() then
     require "justin/diff"
+end
+
+if vim.g.neovide then
+    require "justin/neovide"
 end
