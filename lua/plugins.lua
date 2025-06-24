@@ -29,7 +29,7 @@ use {
     config = function()
         require('lualine').setup({
             options = {
-                icons_enabled = false,
+                icons_enabled = true,
                 theme = 'wombat',
             },
             sections = {
@@ -44,6 +44,7 @@ use {
 use {'nvim-telescope/telescope.nvim',
     requires = 'nvim-lua/plenary.nvim',
     config = function()
+        local actions = require "telescope.actions"
         require('telescope').setup({
             defaults = {
                 mappings = {
@@ -59,6 +60,11 @@ use {'nvim-telescope/telescope.nvim',
                 buffers = {
                     theme = "dropdown",
                     initial_mode = "normal",
+                    mappings = {
+                        n = {
+                            ["d"] = actions.delete_buffer,
+                        },
+                    },
                 },
             },
         })
@@ -113,8 +119,8 @@ use {'dag/vim-fish', ft = 'fish'}
 use {'freitass/todo.txt-vim', ft = 'todo'}
 use {'jsix-os/j6def.vim', ft = 'j6def' }
 use {'jvirtanen/vim-hcl', ft = 'hcl' }
+use {'bakpakin/janet.vim', ft = 'janet' }
 use 'dcharbon/vim-flatbuffers'
--- use 'vimwiki/vimwiki'
 
 use {'preservim/vim-markdown',
     config = function()
@@ -124,15 +130,5 @@ use {'preservim/vim-markdown',
         vim.g.vim_markdown_toc_autofit = 1
     end
 }
-
-use 'preservim/vim-pencil'
-use 'bakpakin/janet.vim'
-
--- Language Server
---use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
---use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
---use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
---use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
---use 'L3MON4D3/LuaSnip' -- Snippets plugin
 
 end)
