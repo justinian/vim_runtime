@@ -8,4 +8,3 @@ vim.g.loaded_netrwPlugin = 1
 require "justin/functions"
 require "justin/options"
 require "justin/keybinds"
-require "justin/lspconfig"

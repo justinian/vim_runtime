@@ -12,7 +12,7 @@ mapl('n', '<cmd>set number!<CR>')
 mapl('w', '<cmd>set wrap!<CR>')
 mapl('W', 'gqip')
 mapl('/', '<cmd>noh<CR>')
-mapl('SS', '<cmd>%s/^\\s\\+$//g')
+mapl('SS', '<cmd>%s/^\\s\\+$//g<CR>')
 
 mapl('<TAB>', '<cmd>e#<CR>')
 mapl('RR', '<cmd>e! %<CR>')
