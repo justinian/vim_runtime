@@ -1,30 +1,24 @@
-function map(mode, keys, command)
-    vim.api.nvim_set_keymap(mode, keys, command, {noremap = true, silent = true})
-end
-
-function mapl(keys, command)
-    vim.api.nvim_set_keymap('n', '<leader>' .. keys, command, {noremap = true, silent = true})
-end
+local map = require("mappings")
 
 vim.g.mapleader = ','
 
-mapl('n', '<cmd>set number!<CR>')
-mapl('w', '<cmd>set wrap!<CR>')
-mapl('W', 'gqip')
-mapl('/', '<cmd>noh<CR>')
-mapl('SS', '<cmd>%s/^\\s\\+$//g<CR>')
+map.leader('n', '<cmd>set number!<CR>')
+map.leader('w', '<cmd>set wrap!<CR>')
+map.leader('W', 'gqip')
+map.leader('/', '<cmd>noh<CR>')
+map.leader('SS', '<cmd>%s/^\\s\\+$//g<CR>')
 
-mapl('<TAB>', '<cmd>e#<CR>')
-mapl('RR', '<cmd>e! %<CR>')
+map.leader('<TAB>', '<cmd>e#<CR>')
+map.leader('RR', '<cmd>e! %<CR>')
 
 -- Plugin keybinds
 -- nvim-tree
-mapl('T', '<cmd>NvimTreeToggle<CR>')
-mapl('t', '<cmd>NvimTreeFocus<CR>')
+map.leader('T', '<cmd>NvimTreeToggle<CR>')
+map.leader('t', '<cmd>NvimTreeFocus<CR>')
 
 -- telescope
-mapl('e', '<cmd>Telescope buffers<CR>')
-mapl('p', '<cmd>Telescope find_files hidden=true<CR>')
-mapl('f', '<cmd>Telescope grep_string<CR>')
+map.leader('e', '<cmd>Telescope buffers<CR>')
+map.leader('p', '<cmd>Telescope find_files hidden=true<CR>')
+map.leader('f', '<cmd>Telescope grep_string<CR>')
 
-map('n', '<C-P>', '<cmd>Telescope find_files<CR>')
+map.set('n', '<C-P>', '<cmd>Telescope find_files<CR>')

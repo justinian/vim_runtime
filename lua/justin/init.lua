@@ -8,3 +8,8 @@ vim.g.loaded_netrwPlugin = 1
 require "justin/functions"
 require "justin/options"
 require "justin/keybinds"
+
+-- DIFF OPTIONS
+if vim.opt.diff:get() then
+    require "justin/diff"
+end
